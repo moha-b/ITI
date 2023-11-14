@@ -1,0 +1,79 @@
+/*selects all elements*/
+*{
+    box-sizing: border-box; /*this tells the browser that the padding will go into the width calculation so width with % will work as intended*/
+    padding: 0;
+    margin:0 ;
+}
+body{
+    border: 16px solid grey;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+/*you can select an html element by simply writing it's name like this one*/
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 20%;
+    font-size: 24px;
+    border: #eaeaea 15px solid;
+}
+/*normal selectors can be either a class which is called by placing a dot(.)before the name
+or an id where you place a hash(#) before the name
+*/
+.Section1{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: space-around; /* align items horizontally */
+    align-items: flex-end; /* align items vertically */
+    padding: 1rem; /*1 rem = 16px*/
+    background: pink ;
+    border: 3px solid #bdbdbd;
+}
+.Section1 img{
+    width: 256px;
+    height: 256px;
+}
+.Section2{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem; /*1 rem = 16px*/
+    background: pink ;
+    border: 3px solid #bdbdbd;
+}
+.Section2 a{
+    margin-top: 1rem;
+}
+.Section3{
+    height: 30%;
+    width: 100%;
+    padding: 1rem; /*1 rem = 16px*/
+    background: pink ;
+    border: 3px solid #bdbdbd;
+}
+
+.Section3 .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.Section3 .buttons img{
+    width: 36px;
+    height: 36px;
+}
+.Section4{
+    width: 100%;
+    text-align: center;
+    padding: 1rem; /*1 rem = 16px*/
+    background: pink ;
+    border: 3px solid #bdbdbd;
+}
