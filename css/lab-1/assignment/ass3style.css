@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+}
+
+.center-text {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.card {
+    text-align: center;
+    width: 250px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Maintain aspect ratio while covering the space */
+}

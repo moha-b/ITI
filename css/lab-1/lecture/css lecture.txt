@@ -1,0 +1,69 @@
+html 
+static web page 
+
+CSS 
+
+<p align="center"></p>
+1- redunduncy 
+
+2- maintability
+
+3- max value font size =7 || image >> border color  || center for image 
+
+4- MIxing between Data and design in tables   
+=========================================================
+
+p{
+  text-align :right ;
+}
+
+=============================================
+
+selector {
+       prop:value;
+       prop:value;
+       prop:value;
+       prop:value;
+       prop:value;
+
+}
+
+// where to write css 
+
+1- External Style 
+
+2- internal Style  inside <style> inside<head>
+
+3- inline style >> style attr 
+
+//  CSS selectors 
+
+Tag name selectors 
+ID Selector 
+Class Selector 
+Group Selector 
+Attribute Selector 
+Universal Selector 
+Hiracy selector 
+:fist child selector 
+:last child selector 
+nth-child()
+ 
+pseudo classes selectors 
+
+
+=================================
+box Model 
+
+
+
+
+
+
+
+
+
+
+
+
+
