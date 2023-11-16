@@ -1,0 +1,37 @@
+// num1 , num2  
+
+-------------------------------------------------------
+let number;
+for(let i=0;i<2;i++)
+{
+    number=prompt(" enter the value");
+    sum+=number;
+}
+--------------------------------------------------------
+
+let number;
+for(let i=0;i<2;i++)
+{
+    number=getNumberValue(" enter number "+(i+1))
+        sum+=number;
+}
+
+----------------------------------------------------
+
+//summition function  --> console.log(sum)
+
+
+if ()
+return sum
+else
+return "something went wrong"
+
+
+
+
+----------------------------------------------------
+function calcualteAvg()
+{
+    arguments
+    return avg;
+}
