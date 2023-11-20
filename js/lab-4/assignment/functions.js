@@ -1,28 +1,3 @@
-// Q1
-const array = [2, 1, 3, 2, 7, 2, 8, 4, 3, 6, 10, 9, 12];
-// Ascending
-console.table(array.sort((a, b) => a - b));
-// Descending
-console.table(array.sort((a, b) => b - a));
-// Numbers larger than 5
-console.log("Numbers larger than 5");
-console.log(array.filter((item) => item > 5));
-// Display Max and Min Number
-console.log("Display Max and Min Number");
-console.log(array.reduce((previousValue, currentValue) => previousValue > currentValue ? previousValue : currentValue));
-console.log(Math.max(...array));
-console.log(array[array.length - 1]);
-console.log(array[0]);
-// Array.from function
-console.log("Array.from function");
-const arrayCopy = Array.from(array, (item) => item * 5);
-console.table(arrayCopy);
-// Remove repeated numbers
-console.log("Remove repeated numbers");
-console.log(arrayCopy.filter((value, index,array) => array.indexOf(value) === index));
-console.log(arrayCopy.filter((value) => value % 2 === 0).length);
-console.log(arrayCopy.filter((value) => value % 2 === 0).join("*"));
-
 /// Q2
 function makeItRandom(max,min,length) {
     // check if the length is even
@@ -38,16 +13,13 @@ function makeItRandom(max,min,length) {
         .flatMap((number) => [number, number]);
     return shuffle(array);
 }
-console.log(makeItRandom(10,1,6));
+
 
 /// Q3
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
     return array;
 }
-
-let shuffledArray = shuffle([1, 2, 3, 4, 5]);
-console.log(shuffledArray);
 
 /// Q4
 function courseDetails(numStudents, numCourses) {
@@ -80,11 +52,11 @@ function courseDetails(numStudents, numCourses) {
         }
     }
 
-// Display the 2D array using console.table
     console.table(myArray);
 
 // Display average grade for each course
     for (let j = 0; j < numCourses; j++) {
+        // get each column
         let courseGrades = myArray.map(studentGrades => studentGrades[j]);
         let averageGrade = calculateAverage(courseGrades);
         console.log(`Average grade for Course ${j + 1}: ${averageGrade.toFixed(2)}`);
