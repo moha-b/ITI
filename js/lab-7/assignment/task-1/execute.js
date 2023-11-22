@@ -1,3 +1,4 @@
+let score = 0;
 window.addEventListener("load", function () {
     let bodyObject = document.querySelector("body");
     let scoreTextObject = document.createElement("h5");
@@ -28,13 +29,6 @@ window.addEventListener("load", function () {
     };
     // 5 - calculate score
     scoreTextObject.classList.add("h5");
-    scoreTextObject.textContent = `Score : ${score}`;
+    scoreTextObject.textContent = `Score : ${incrementScore(score)}`;
     bodyObject.appendChild(scoreTextObject);
 });
-
-let score = 0;
-
-
-const incrementScore = () => {
-    return ++score;
-}

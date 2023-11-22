@@ -64,3 +64,7 @@ const handleBasketCollision = () => {
 const handleGroundCollision = (imageObject) => {
     imageObject.src = "images/broken.png";
 }
+
+const incrementScore = (score) => {
+  return score++;
+}

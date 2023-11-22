@@ -1,0 +1,2 @@
+const EGG_FALL_SPEED = 8;
+const EGG_ANIMATION_INTERVAL = 50;
