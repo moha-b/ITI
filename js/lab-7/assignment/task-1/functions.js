@@ -1,23 +1,23 @@
+let score = 0;
 const getRandomPosition = () => {
-    return Math.floor((Math.random() * window.innerWidth) - 1);
+    const margin = 200; // Adjust the margin as needed
+    const maxWidth = window.innerWidth - margin;
+    return Math.floor(Math.random() * maxWidth);
 };
-const instantiateEgg = (parentObject,basketObject) => {
-    // egg object
+const instantiateEgg = () => {
+    // 1 - create a copy from the egg in random position
     let eggObject = document.createElement("img");
     eggObject.src = "images/egg.png";
     eggObject.classList.add("egg");
     eggObject.style.left = `${getRandomPosition()}px`;
-    // add to the parent
-    parentObject.appendChild(eggObject);
-    // animate and delete and create
-    animateEggToBottom(eggObject, parentObject, basketObject);
+    return eggObject;
 }
 
-const animateEggToBottom = (imageObject, parentObject, basketObject) => {
+const animateEggToBottom = (imageObject, basketObject) => {
     let top = 0;
 
     let id = setInterval(() => {
-        top += 8;
+        top += EGG_FALL_SPEED;
 
         if (top < window.innerHeight - imageObject.height) {
             imageObject.style.top = top + "px";
@@ -26,24 +26,22 @@ const animateEggToBottom = (imageObject, parentObject, basketObject) => {
             if (checkCollision(imageObject, basketObject)) {
                 // Egg hit the basket
                 clearInterval(id);
-                parentObject.removeChild(imageObject);
+                imageObject.remove();
                 handleBasketCollision();
-                instantiateEgg(parentObject, basketObject);
+                instantiateEgg();
             }
         } else {
             // Egg hit the ground
             clearInterval(id);
             handleGroundCollision(imageObject);
-            setTimeout(function () {
-                parentObject.removeChild(imageObject);
-            },2000);
-            instantiateEgg(parentObject, basketObject);
+            instantiateEgg();
         }
-    }, 50);
+    }, EGG_ANIMATION_INTERVAL);
 }
-
+// check if the bounding boxes
+// of the egg and the basket hit each other
 const checkCollision = (eggObject, basketObject) => {
-    // Get the bounding boxes of the egg and the basket
+
     const eggRect = eggObject.getBoundingClientRect();
     const basketRect = basketObject.getBoundingClientRect();
 
@@ -63,8 +61,37 @@ const handleBasketCollision = () => {
 
 const handleGroundCollision = (imageObject) => {
     imageObject.src = "images/broken.png";
+    setTimeout(function () {
+        imageObject.remove();
+    },EGG_REMOVE_TIMEOUT);
 }
-
-const incrementScore = (score) => {
-  return score++;
+// update score text
+const updateScore = (textObject) => {
+    textObject.textContent = `Score: ${score}`;
+}
+const incrementScore = () => {
+    score++;
+}
+const spawnEgg  = (parentObject,basketObject) => {
+    let eggObject = instantiateEgg();
+    parentObject.appendChild(eggObject);
+    animateEggToBottom(eggObject, basketObject);
+};
+function basketController(basketObject) {
+    let leftOffset = 50;
+    document.onkeydown = function (event) {
+        switch (event.key) {
+            case "ArrowLeft":
+                if (basketObject.x >= 50) {
+                    leftOffset -= 1;
+                }
+                break;
+            case "ArrowRight":
+                if (basketObject.x <= window.innerWidth + basketObject.width) {
+                    leftOffset += 1;
+                }
+                break;
+        }
+        basketObject.style.left = `${leftOffset}vw`;
+    };
 }
