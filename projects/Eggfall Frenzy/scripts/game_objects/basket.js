@@ -31,7 +31,6 @@ class Basket {
 
         // Check for intersection of boundaries
         if (
-            // objectBoundaries.top < basketBoundaries.bottom &&
             objectBoundaries.bottom > basketBoundaries.top &&
             objectBoundaries.left < basketBoundaries.right &&
             objectBoundaries.right > basketBoundaries.left

@@ -1,6 +1,5 @@
 // Interval
 const EGG_ANIMATION_INTERVAL = 50;
-const EGG_SPAWN_INTERVAL = 1000;
 const EGG_DESTROY_TIMEOUT = 1000;
 const DEFAULT_SPAWNING_TIME = 1000;
 // dimensions

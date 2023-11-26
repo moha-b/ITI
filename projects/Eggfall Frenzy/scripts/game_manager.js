@@ -16,7 +16,7 @@ class GameManager {
         this.#spawnController.Spawning(() => new BlackEgg(), getRandomInterval());
     }
 
-// TODO: try to make it implicate
+    // TODO: try to make it implicate
     basketControllers(basketObject){
         // Handle keyboard events to move the basketObject
         document.addEventListener("keydown", function (event) {
