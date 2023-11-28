@@ -3,6 +3,10 @@ class Basket {
     currentPosition = 0;
     constructor() {
         // TODO: look at the (todo) at game manager
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "ArrowLeft") this.moveLeft();
+            else if (event.key === "ArrowRight") this.moveRight();
+        });
     }
 
     getObject(){

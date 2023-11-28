@@ -1,6 +1,6 @@
 class UiController {
     static #instance = null;
-    #textObject = document.querySelector("h3");
+    #textObject = document.querySelector(".scoreText");
     #score = 0;
 
     constructor() {
