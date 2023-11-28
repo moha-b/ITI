@@ -1,0 +1,29 @@
+body {
+    margin: 70px 300px;
+    font-family: Andalus;
+    font-size:x-large;
+    font-weight:bold;
+    background-color:lightGrey;
+}
+[type=text],[type=button]
+{
+    font-family:'Century Gothic';
+    font-size:large;
+}
+
+table {
+    width: 400px;
+
+}
+span{ color:red;display: none}
+.SD {
+    background-color: lightpink;
+}
+
+.OS {
+    background-color: lightyellow;
+}
+
+.EL {
+    background-color: lightskyblue;
+}
