@@ -1,0 +1,66 @@
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Five Ways of Making AJAX Calls  -DEMO</title>
+
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
+	</head>
+	<body>
+    	<div id="page-wrap">
+    		<div>
+    			<h1>Make AJAX Calls with jQuery</h1>
+    		</div>
+			
+			<div class="functions">
+				<span>load()</span>
+
+				<input type="submit" value="load() GET"  />
+				<input type="submit" value="load() POST"  />
+				<input type="submit" value="load() DELETE" />
+				
+			</div>
+			
+			<div   class="functions">
+				<span>Add Department</span>
+				<form name="sendPostRequest">
+					<input type="text" value="id" name="departmentId" />
+					<br/>
+					<input type="text" value="name" name="departmentName" />
+					<br/>
+					<input type="text" value="name" name="departmentName" />
+					<input type="button" value="save" />
+
+				</form>
+			</div>
+			
+			<div   class="functions">
+				<span>Update Department</span>
+				<input type="text" name="departmentIdToUpdate"/>
+				<input type="text" name="departmentNameToUpdate"/>
+				<input type="button" value="update"  />
+			</div>
+			
+			<div   class="functions">
+				<select name="departments"></select>
+			</div>
+			
+			<div  class="functions">
+				<span>fetch & $ post</span>
+				<input type="button" value="fetchPost" id="post" />
+			</div>
+			
+			<div class="functions result">
+				
+			</div>
+		</div>
+	
+
+		<script src="functions.js"></script>
+		<script src="ajax.js"></script>
+
+
+</script>
+
+	</body>
+</html>

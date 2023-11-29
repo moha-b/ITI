@@ -1,0 +1,24 @@
+
+
+//********** Http object
+1-  url   (ip and port)
+2- method     get --> get data
+              ex:   domain/students    
+                    domain/students?id=1
+
+              post -->   insert student
+              ex    domian/students   inof from clinet inside hidden http body (as form)
+
+              patch or put --> update
+              ex:   domain/students
+
+              delete --> delet student
+              ex: domain/students
+
+
+3- body  (data)
+
+4- headers (settings)
+
+
+
