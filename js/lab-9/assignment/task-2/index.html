@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task-2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/functions.js"></script>
+    <script src="scripts/main.js"></script>
+
+</head>
+<body>
+
+<form>
+    <table>
+        <tr>
+            <td colspan="2">
+                Department:
+                <input type="radio" name="Department" value="lightpink" />SD
+                <input type="radio" name="Department" value="lightyellow" />OS
+                <input type="radio" name="Department" value="lightskyblue" />EL
+            </td>
+        </tr>
+        <tr><td>StudentName<input type="text" name="studentName"  /></td></tr>
+        <tr><td>StudentGrade<input type="text" name="studentGrade"/></td></tr>
+
+        <tr><td><input type="button"  value="Add" /></td></tr>
+        <tr>
+            <td colspan="2" class="sort">
+                Sort:
+                <select class="sort">
+                    <option value="all">All</option>
+                    <option value="name">Name</option>
+                    <option value="grade">Grade</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="filter">
+                Filter:
+                <select class="filter">
+                    <option value="all">All</option>
+                    <option value="success">Success</option>
+                    <option value="fail">Fail</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>
+    <table class="studentTable">
+
+    </table>
+</body>
+</html>

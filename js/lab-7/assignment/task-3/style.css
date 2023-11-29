@@ -1,0 +1,46 @@
+#container {
+    border: 3px solid black;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.list {
+    margin: 16px;
+    width: 200px;
+    border: 3px solid black;
+}
+
+.move_div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+li {
+    cursor: pointer;
+}
+
+.focus {
+    background-color: green;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#form_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[name="course"] {
+    padding: 8px;
+    width: 200px;
+}
+
+input[type="submit"] {
+    padding: 8px;
+    cursor: pointer;
+}

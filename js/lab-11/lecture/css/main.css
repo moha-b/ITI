@@ -1,0 +1,89 @@
+body {
+	font-family: Tahoma, serif;
+	background: #2D2620;
+	margin: 0; padding: 0;
+}
+h1{
+	font-family: Georgia;
+	color:#f9b41e;
+	font-size:3em;
+	line-height:1em;
+	margin: 20px;
+	font-weight: bold;
+	vertical-align:top;
+}
+h2{
+	font-family: Georgia;
+	color:#fff;
+	font-size:24px;
+	font-weight: bold;
+	margin: 5px;
+}
+#page-wrap{
+	position:relative;
+	width:800px;
+	height: 550px;
+	margin: 0 auto;
+	padding: 10px;
+	background:#514539;
+}
+.functions {
+	clear: both;
+	margin: 20px 10px; padding: 5px 10px 10px 10px;
+	border: 2px solid #f9b41e;
+	background-color: #2D2620;
+}
+.functions input {
+	margin: 3px 10px; padding: 0 10px;
+	font-family:"Arial";
+	font-size: 15px;
+}
+#load-div input {
+	float: left;
+}
+.functions span {
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 2em;
+}
+
+
+
+div.functions:nth-child(3){
+	width: 220px;
+	
+}
+div.functions:nth-child(4) {
+	width: 220px;
+}
+div.functions:nth-child(5){
+	width: 220px;
+}
+div.functions:nth-child(6) {
+	width: 220px;
+} 
+div.result.functions {
+	position: absolute;
+	bottom: 36px;
+	right: 8px;
+	width: 500px;
+	height: 328px;
+	background: none;
+	padding: 10px;
+}
+.loading {
+	position: absolute;
+	top: 170px; left: 245px;
+}
+div.result.functions p {
+	font-family: Georgia;
+	color: #fff;
+	font-size: 1.2em;
+	margin: 5px;
+}
+#picture {
+	float: right;
+	margin: 10px
+
+}

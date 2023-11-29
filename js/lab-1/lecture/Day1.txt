@@ -1,0 +1,44 @@
+
+/**************** ES5  Types, values and variables **********/
+   
+/**   ES5 varaibles Declarations
+ *    -define varibales with var keyword  (Global variable through entire script and the following scripts)
+ *    -without var keyword is not recommended 
+ */
+
+
+/************* primitive data types ************************/
+
+
+var numberInt=1000;   // In the Global Context
+
+numberInt="eman";   //forbidden not on the global context -- in Global Object
+
+
+//call the variable with case-sensetivity
+
+//typeof operator 
+
+
+//what if the variable inisde another script?!
+
+
+//--------------- 2- string  immutable  ES5 --> " and ' , ES6 ---> `(backtick) which is better
+
+
+
+/*
+* JS dynamic typing ---------------------------
+*/
+
+
+/**************
+ * var Problems
+	
+------------------------	Hoisting 
+before execution , code is scanned  for varibales declarations
+
+/*  ES6 variables declarations (block scoping)
+    let , const and var -------------------------
+
+*/

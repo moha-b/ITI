@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ass#1</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Q3, b
+        console.log("After");
+        // this gives us "Uncaught ReferenceError: number1,2 and 3 is not defined"
+        //console.log("Number1 value after definition in another script :" + number1 + "in Html");
+        //console.log("Number2 value after definition in another script :" + number2 + "in Html");
+        //console.log("Number3 value after definition in another script :" + number3 + "in Html");
+        //conclusion: any variable has not been hoisted and tried to print it or access
+        // it will throw an error which is "ReferenceError: ${variable} is not defined"
+    </script>
+    <script src="external.js"></script>
+    <script>
+        // Q3, c
+        console.log("Before");
+        // ReferenceError: Cannot access 'number2' before initialization (lat, const)
+        //console.log("Number2 value after definition in another script :" + number2 + "in Html");
+        //console.log("Number3 value after definition in another script :" + number3 + "in Html");
+        //console.log("Number1 value before definition in another script : " + number1 + " in Html");
+
+        // Q3, i
+        console.log(`first name: ${firstName}`);
+
+        // Q3, g
+        // Uncaught SyntaxError: Identifier 'number2' has already been declared
+        //let number2 = 20;
+        var number1= 100; // <-- NUMBER 1
+        // Q3, h
+        // create a number2 variable 3 times
+        for (let i = 0; i < 3; i++) {
+            let number2 = 20;
+            console.log(number2);
+        }
+        // a
+        console.log(`number1 + number2 : ${number1 + number2}`); // 102.9
+        // b
+        console.log(`flag + number2 : ${flag + number2}`); // 3.9
+        // c
+        console.log(`flag + firstName : ${flag + firstName}`); // true"Mohab"
+        // d
+        console.log(`number1 + firstName : ${number1 + firstName}`); // 100"Mohab"
+        // e
+        console.log(`number1 * flag : ${number1 * flag}`); // 100
+        // f
+        console.log(`number1 * \"10\" : ${"10" * flag}`); // 100
+        let testVariable = "10" * flag;
+        console.log(`number1 * \"10\" data type: ${typeof "10" * flag}`); // nan
+        console.log(`number1 * \"10\" data type: ${typeof testVariable}`); // in * number and in + string
+        // g
+        console.log(`number1 / lastName: ${number1 / lastName}`); // nan
+        // h
+        console.log(`${firstName} ${middleName} ${lastName}`);
+        //conclusion: if hoisted happened the variable, is declared in memory,
+        // if we try to access it before initialization, it will throw error not initialized.
+        // if the hoisted not happened, it will throw an error which is "ReferenceError: ${variable} is not defined"
+    </script>
+</head>
+<body>
+    <div class="dummy"> Hi There </div>
+</body>
+</html>
+
+<!--
+Q3, d
+
+the answer is:
+in the Internal js:
+    this will be cuz an exception "ReferenceError: number1 is not defined".
+in the external js:
+    same within the external file, but the rest of the fill will not be executed due to the exception.
+
+-->
