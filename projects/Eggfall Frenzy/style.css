@@ -1,0 +1,59 @@
+
+body{
+    height: 100vh;
+    background-image: url("assets/images/farm.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    position: fixed;
+}
+.egg {
+    position: absolute;
+    width: 50px;
+    height:50px;
+}
+.dashboard-img{
+    width: 30px;
+    height: 30px;
+}
+
+.basket {
+    position: absolute;
+    bottom: 20px;
+    width: 90px;
+    height: 90px;
+}
+.eggContainer{
+    position: absolute;
+    width: 100vw;
+}
+
+.scoreText{
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Dilo World";
+}
+
+.dashboard{
+    border: solid 1px #1a1a1a;
+    border-radius: 10px;
+    background-color: rgba(26,26,26,0.63);
+
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: white;
+}
+table{
+    padding: 5px;
+    font-family: "Dilo World";
+}
+th{
+    padding: 5px;
+}
+td{
+    text-align: center;
+    padding: 5px;
+}

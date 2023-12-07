@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Egg-fall Frenzy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/utils/constants.js"></script>
+    <script src="scripts/utils/functions.js"></script>
+    <!--  Controllers  -->
+    <script src="scripts/controllers/spawn_controller.js"></script>
+    <script src="scripts/controllers/ui_controller.js"></script>
+    <!--  Game Objects   -->
+    <script src="scripts/game_objects/game_object.js"></script>
+    <script src="scripts/game_objects/egg.js"></script>
+    <script src="scripts/game_objects/black-egg.js"></script>
+    <script src="scripts/game_objects/golden-egg.js"></script>
+    <!--  Basket   -->
+    <script src="scripts/game_objects/basket.js"></script>
+    <!--  Game Manager  -->
+    <script src="scripts/managers/game_manager.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+<div class="scoreText"></div>
+<div class="dashboard">
+    <table>
+        <th>img</th>
+        <th>Score</th>
+        <tr>
+            <td><img class="dashboard-img" src="assets/images/egg.png" alt="egg"></td>
+            <td>+ 1</td>
+        </tr>
+        <tr>
+            <td><img class="dashboard-img" src="assets/images/golden-egg.png" alt="golden egg"></td>
+            <td>+ 5</td>
+        </tr>
+        <tr>
+            <td><img class="dashboard-img" src="assets/images/black-egg.png" alt="black egg"></td>
+            <td>- 10</td>
+        </tr>
+    </table>
+</div>
+<img class="basket" src="assets/images/basket.png">
+
+</body>
+</html>
