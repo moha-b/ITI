@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{
+            width:500px;
+            padding:10px;
+            margin:10px auto;
+            border:1px solid black;
+
+        }
+        p{
+            width:300px;
+            padding:10px;
+            margin:10px auto;
+            background-color:lightyellow;
+            text-align:center;
+            font-weight:bold;
+            border:1px solid black;
+        }
+        /* select first p inside any div */
+        /* > direct child */
+        /*div>p{
+            background-color:lightblue;
+        }*/
+       /* div>p:nth-child(1){
+            background-color:lightblue;
+        }*/
+      /* div>p:first-of-type{
+           background-color:orange;
+       }*/
+        /*div > p:last-of-type {
+            background-color: orange;
+        }*/
+       /* div > p:first-child {
+            background-color: orange;
+        }*/
+       /*only-child*/
+       /*only-of-type*/
+       /*div p:only-child{
+           background-color:lightgreen;
+       }*/
+       /* counter started from 0 incremental by 1*/
+       /*p:nth-child(3)*/
+       /*p:nth-child(2n+1){
+           background-color:lightgray;
+       }*/
+            /*p:nth-child(2n) {
+                background-color: lightgray;
+            }*/
+            /* select p from 2 to end*/
+            /*p:nth-child(n+2) {
+                background-color: lightgray;
+            }*/
+            /* select child from 8 to start*/
+            /*p:nth-child(-n+8) {
+                background-color: lightgray;
+            }*/
+            /*select from 2 to 8*/
+          /*  p:nth-child(n+2):nth-child(-n+8){
+                background-color:lightgray;
+            }*/
+
+          /* select any p with class attribute */
+          /* attribute selector*/
+          /*p[class]{
+              background-color:lightgreen;
+          }*/
+          /*p.itimansoura{
+              background-color:lightblue;
+          }*/
+            /*p[class=itimansoura] {
+                background-color: lightblue;
+            }*/
+            /*select all p with class which ends with iti*/
+            /**=contains , =equal , ^=starts with , $= ends with */
+            /*p[class ^=iti]{
+                background-color:lightcyan;
+            }*/
+    </style>
+</head>
+<body>
+    <!--<p class="itimansoura">ITI</p>
+    <p class="mansouraiti">ITI</p>
+    <p class="mansouraitimansura">ITI</p>
+    <p>ITI</p>
+    <h4 class="itimansoura">Mansoura</h4>-->
+
+    <!--<p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+    <p>10</p>-->
+    <!--<p>p child for body</p>
+    <div>
+        <span>it's span</span>
+        <p>pone</p>
+        <p>ptwo</p>
+    </div>
+    <div>
+        <p>pone</p>
+        <p>ptwo</p>
+        <span>it's span</span>
+    </div>
+    <div>
+        <p>ptwo</p>
+        <span>it's span</span>
+    </div>
+    <div>
+        <p>ptwo</p>
+    </div>-->
+    <!--<p>body child</p>
+    <div id="mainwrapper">
+        <span>it's span</span>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <span>it's span</span>
+    </div>
+    <div id="mainwrapper">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+    </div>
+    <div id="mainwrapper">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+    </div>
+    <p>External P</p>-->
+</body>
+</html>

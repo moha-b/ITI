@@ -1,0 +1,46 @@
+
+@keyframes section-animation {
+    0% {
+        left: 10px;
+        top: 40px;
+        background-color:black;
+    }
+    30% {
+        top: 40px;
+        left: 300px;
+        background-color: lightblue;
+    }
+    60% {
+        left: 300px;
+        top: 300px;
+        background-color: lightgreen;
+    }
+    90% {
+        left: 10px;
+        top: 300px;
+        background-color: lightgray;
+    }
+}
+
+section{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+section:hover{
+    animation-play-state:paused;
+    transform:scale(1.5);
+}
+.start-animation{
+    animation: section-animation;
+    transition:all 3s;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+.stop-animation{
+    animation-play-state: paused;
+}

@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RWD</title>
+    <link href="generalstyle.css" rel="stylesheet" />
+    <link href="portraitstyle.css" rel="stylesheet" media="all and (orientation:portrait)" />
+    <style>
+      /*  @media all and (orientation:landscape){*/
+            /** {
+                padding: 0;
+                margin: 0;
+            }
+
+            #mainwrapper {
+                width: 80%;
+                padding: 5px;
+                margin: 10px auto;
+                border: 1px solid black;
+            }
+
+            #mainheader, #mainfooter {
+                border: 1px solid black;
+                padding: 10px 5px;
+                margin: 5px;
+                font-weight: bold;
+                text-align: center;
+                background-color: lightgray;
+            }
+
+            #mainnav {
+                border: 1px solid black;
+                margin: 5px;
+                padding: 10px;
+                background-color: blue;
+            }
+
+                #mainnav li {
+                    list-style: none;
+                    color: white;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 70px;
+                    text-align: center;
+                }
+
+                    #mainnav li:hover {
+                        color: yellow;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+
+            #mainsection {
+                width: 60%;
+                border: 1px solid black;
+                margin: 5px;
+                padding: 5px;
+            }
+
+                #mainsection article {
+                    border: 1px solid black;
+                    padding: 25px 5px;
+                    margin: 5px;
+                }
+
+                    #mainsection article:nth-child(odd) {
+                        background-color: lightgray;
+                    }
+
+                    #mainsection article:nth-child(even) {
+                        background-color: lightblue;
+                    }
+
+            #mainaside {
+                width: 20%;
+                padding: 5px;
+                margin: 5px;
+                border: 1px solid black;
+            }
+
+                #mainaside p {
+                    border: 1px solid black;
+                    padding: 10px;
+                    margin: 10px 4px;
+                }
+
+                    #mainaside p:nth-child(odd) {
+                        background-color: lightblue
+                    }
+
+                    #mainaside p:nth-child(even) {
+                        background-color: lightgray
+                    }
+
+            #mainsection, #mainaside {
+                display: inline-block;
+            }*/
+        /*}*/
+
+
+        /*@media all and (orientation:portrait) {
+            #mainheader, #mainfooter {
+                background-color: lightgreen;
+            }
+            #mainsection {
+                width: 80%;
+                margin: 5px auto;                
+            }
+   
+            #mainaside , #mainaside>p {
+                display:none;
+            }
+        }*/
+
+
+    </style>
+</head>
+<body>
+    <div id="mainwrapper">
+        <header id="mainheader">
+            <h4>ITI Mansoura</h4>
+        </header>
+        <nav id="mainnav">
+            <ul>
+                <li>Home</li>
+                <li>Contact</li>
+                <li>About</li>
+            </ul>
+        </nav>
+        <section id="mainsection">
+            <article>
+                <header>
+                    <h4>Article one header</h4>
+                </header>
+                <p>Article one body</p>
+                <footer>
+                    <p>Footer for article one</p>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h4>Article two header</h4>
+                </header>
+                <p>Article two body</p>
+                <footer>
+                    <p>Footer for article two</p>
+                </footer>
+            </article>
+        </section>
+        <aside id="mainaside">
+            <p>ITI Mansoura</p>
+            <p>ITI Alex</p>
+            <p>ITI Smart</p>
+            <p>ITI NewCapital</p>
+        </aside>
+        <footer id="mainfooter">
+            <p>CopyRights &copy; Reserved to MEARN and Front Tracks</p>
+        </footer>
+    </div>
+</body>
+</html>

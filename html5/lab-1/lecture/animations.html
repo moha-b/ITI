@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /*steps to write animation:
+            1- create animation using @keyframes (from to  , %)
+            2- assign animation for target element using property aimation
+        */
+        @keyframes sectionanimation{
+            /*from{
+                width:200px;
+                border-style:solid;
+            }
+            to {
+                width: 300px;
+                height:300px;
+                border-style: dotted;
+                background-color:yellow;
+                border-radius:50%;
+            }*/
+            0%{
+                /*background-color:red;*/
+                background-image:url(UP/1.jpg);
+            }
+            50% {
+                /*background-color: green;*/
+                background-image: url(UP/2.jpg);
+            }
+            75% {
+                /*background-color: blue;*/
+                background-image: url(UP/3.jpg);
+            }
+            99% {
+                /*background-color: orange;*/
+                background-image: url(UP/4.jpg);
+            }
+            
+        }
+        section{
+           width:200px;
+            height:200px;
+            border:1px solid black;
+            margin:20px auto;
+            animation:sectionanimation;
+            animation-duration:20s;
+            animation-iteration-count:infinite;
+            animation-direction:alternate;
+            background-repeat:no-repeat;
+            background-position:center;
+            background-size:cover;
+            /*animation-direction:alternate-reverse;*/
+            /*animation-delay:2s;*/
+
+        }
+        section:hover{
+            animation-play-state:paused;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+
+    </section>
+</body>
+</html>

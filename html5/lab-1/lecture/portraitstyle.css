@@ -1,0 +1,12 @@
+﻿#mainheader, #mainfooter {
+    background-color: lightgreen;
+}
+
+#mainsection {
+    width: 80%;
+    margin: 5px auto;
+}
+
+#mainaside, #mainaside > p {
+    display: none;
+}

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        @keyframes sectionanimation{
+            0% {
+                left: 10px;
+                top: 10px;
+                background-color:lightyellow;
+            }
+            30% {
+                top: 10px;
+                left: 300px;
+                background-color: lightblue;
+            }
+            60% {
+                left: 300px;
+                top: 300px;
+                background-color: lightgreen;
+            }
+            90% {
+                left: 10px;
+                top: 300px;
+                background-color: lightgray;
+            }
+        }
+        section{
+            width:100px;
+            height:100px;
+            border:1px solid black;
+            position:absolute;
+           animation:sectionanimation;
+           animation-duration:2s;
+           /*animation-direction:alternate;*/
+           animation-iteration-count:infinite;
+           transition:all 2s;
+        }
+        section:hover{
+            animation-play-state:paused;
+            transform:scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+</body>
+</html>
