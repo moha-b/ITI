@@ -1,0 +1,69 @@
+#main-view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: black 3px solid;
+    padding: 30px;
+    box-shadow: inset 0 0 50px orange;
+}
+
+#view {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 50px orange;
+    border: black 2px solid;
+    border-radius: 20px;
+    overflow: clip;
+    margin: 30px;
+}
+
+#details {
+    display: none;
+}
+
+#map-view{
+    width: 100%;
+    height: 100%;
+    border: purple 2px solid;
+    border-radius: 20px;
+    overflow: clip;
+    margin: 30px;
+    box-shadow: greenyellow;
+}
+
+#details-view{
+    width: 100%;
+    height: 100%;
+    border: black 2px solid;
+    border-radius: 20px;
+    background-color: greenyellow;
+    padding: 20px;
+    margin: 30px;
+    box-shadow: inset 0 0 70px blue;
+}
+
+input[type="button"]{
+    background-color: blue;
+    color: white;
+    width: 150px;
+    height: 50px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 15px;
+}
+input[type="button"]:hover{
+    background-color: blue;
+    color: white;
+    transform: scale(1.05) rotate(-2deg);
+}
+
+#buttons{
+    border: black 2px solid;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    box-shadow: inset 0 0 50px orange;
+    border-radius: 100px;
+    justify-content: space-evenly;
+}

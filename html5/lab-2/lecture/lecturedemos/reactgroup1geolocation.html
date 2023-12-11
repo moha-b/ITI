@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Geolocation</title>
+    <style>
+        #mymap {
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyB90FxtYG_ybAYXGkz0ybkmkboE2nEbezI"></script>
+    <script>
+        window.addEventListener('load', function () {
+            mymap = document.getElementById('mymap');
+        });
+        function getlocationfun() {
+            //1- check geolocation : aviablae in user browser or not
+            //1- if yes : ask user for permission
+            //a- allow : get Location object data
+            //b:block : display Message : web app can't suggect nearst services for you
+            //2- if no : display Message for user : update browser and try again
+            if (navigator.geolocation) {
+                // available
+                // ask user for permission : getCurrentPosition(success callback , error callback)
+                navigator.geolocation.getCurrentPosition(getposition, errorhandlere);
+            } else {
+                //not available
+                mymap.innerText = "orry , Update Your Browser And Try Again !";
+            }
+        }
+        function getposition(e) {
+            //alert("Success");
+            //console.log(e);
+            lat = e.coords.latitude;
+            lon = e.coords.longitude;
+
+
+            //latlon = lat + " , " + lon;
+            //mymap.innerText = latlon;
+
+            //1- create google latlng ovject ( lat , lon )
+            var location = new google.maps.LatLng(lat, lon);
+            //2- specify specs of map : zoom : , center
+            var specs = { zoom: 17, center: location };
+            // 3 retrive map and display map
+            new google.maps.Map(mymap, specs);
+        }
+        function errorhandlere(e) {
+            alert("Error");
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="GetLocation" onclick="getlocationfun();"/>
+    <div id="mymap">
+    </div>
+</body>
+</html>

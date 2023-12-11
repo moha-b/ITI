@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        section{
+            width:400px;
+            text-align:center;
+            height:380px;
+            border:2px solid black;
+            margin:10px 50px;
+            float:left;
+        }
+        img{
+            width:100px;
+            height:100px;
+            margin:10px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            allimages = this.document.images;
+            left = this.document.getElementById('left');
+            right = this.document.getElementById('right');
+            //event registeration for every element 
+            // images : drag start | drag end 
+            for (var i = 0; i < allimages.length; i++) {
+                allimages[i].addEventListener('dragstart', startdrag);
+                allimages[i].addEventListener('dragend', enddrag);
+            }
+            // left : drop | enter | over
+            left.addEventListener('drop', dropped);
+            left.addEventListener('dragenter', enterdrag);
+            left.addEventListener('dragover', overdrag);
+
+            //right : leave 
+            right.addEventListener('dragleave', leavedrag);
+
+
+
+
+
+
+
+
+        });//end of load
+        function startdrag(e) {
+            //console.log(e.target.outerHTML);
+            //e.preventDefault();
+            //console.log(e);
+            e.dataTransfer.setData('myimg', e.target.outerHTML);
+        }
+        function enddrag(e) {
+            e.preventDefault();
+            e.target.style.display = "none";
+        }
+        function dropped(e) {
+            e.preventDefault();
+           left.innerHTML += e.dataTransfer.getData('myimg');
+        }
+        function enterdrag(e) {
+            e.preventDefault();
+        }
+        function leavedrag(e) {
+            e.preventDefault();
+            e.target.style.backgroundColor = "lightpink";
+        }
+        function overdrag(e) {
+            e.preventDefault();
+        }
+    </script>
+</head>
+<body>
+    <section id="left">
+
+    </section>
+    <section id="right">
+        <img src="UP/1.jpg" data-stock="5" />
+        <img src="UP/2.jpg" />
+        <img src="UP/3.jpg" />
+        <img src="UP/4.jpg" />
+        <img src="UP/5.jpg" />
+        <img src="UP/6.jpg" />
+        <img src="UP/7.jpg" />
+        <img src="UP/8.jpg" />
+        <img src="UP/9.jpg" />
+    </section>
+</body>
+</html>
