@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        #container{
+            text-align: center;
+        }
+        input{
+            border: 1px solid black;
+            border-radius: 100px;
+            padding: 10px;
+            margin: 20px;
+        }
+        #login{
+            border: 2px solid black;
+            border-radius: 30px;
+            background-color: lightcoral;
+            color: white;
+            width: 400px;
+            padding: 20px;
+        }
+        #login:hover{
+            background-color: aqua;
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="1.jpeg" width="100" height="100"/>
+        <form>
+            <input type="text" placeholder="Username" name="username" size="50"/></br>
+            <input type="password" placeholder="Password" name="password" size="50"/>
+        </form>
+
+        <img id="img-1" src="star1.png" width="40" height="40"/>
+        <img id="img-2" src="star1.png" width="40" height="40"/>
+        <img id="img-3" src="star1.png" width="40" height="40"/>
+        <img id="img-4" src="star1.png" width="40" height="40"/>
+        <img id="img-5" src="star1.png" width="40" height="40"/>    <br/> <br/>
+        <p id="rate">Rate : 0</p>    </br>
+
+        <button id="login">Register</button>
+    </div>
+    
+
+    <script>
+        $("img").mouseover(function(event){
+            if(event.target.id=="img-1"){
+                $("#img-1").attr("src", "star.png");
+                $("#rate").text("Rate : 1");
+            }
+            if(event.target.id=="img-2"){
+                $("#img-1").attr("src", "star.png");
+                $("#img-2").attr("src", "star.png");
+                $("#rate").text("Rate: 2");
+            }if(event.target.id=="img-3"){
+                $("#img-1").attr("src", "star.png");
+                $("#img-2").attr("src", "star.png");
+                $("#img-3").attr("src", "star.png");
+                $("#rate").text("Rate:3");
+            }if(event.target.id=="img-4"){
+                $("#img-1").attr("src", "star.png");
+                $("#img-2").attr("src", "star.png");
+                $("#img-3").attr("src", "star.png");
+                $("#img-4").attr("src", "star.png");
+
+                $("#rate").text("Rate : 4");
+            }if(event.target.id=="img-5"){
+                $("#img-1").attr("src", "star.png");
+                $("#img-2").attr("src", "star.png");
+                $("#img-3").attr("src", "star.png");
+                $("#img-4").attr("src", "star.png");
+                $("#img-5").attr("src", "star.png");
+
+                $("#rate").text("Rate : 5");
+            }
+        });
+
+        $("img").mouseout(function() {
+            $("#img-1").attr("src", "star1.png");
+            $("#img-2").attr("src", "star1.png");
+            $("#img-3").attr("src", "star1.png");
+            $("#img-4").attr("src", "star1.png");
+            $("#img-5").attr("src", "star1.png");
+
+            $("#rate").text("Rate : 0");
+        });
+
+        $("img").click(function(event){
+            if(event.target.id=="img-1"){
+                $("#img-1").attr("src", "star.png");
+                $("#img-2").attr("src", "star1.png");
+                $("#img-3").attr("src", "star1.png");
+                $("#img-4").attr("src", "star1.png");
+                $("#img-5").attr("src", "star1.png");
+                $("#rate").text("Rate : 1");
+            }
+            if(event.target.id=="img-2"){
+                $("#img-1").attr("src", "star.png");
+                $("#img-2").attr("src", "star.png");
+                $("#img-3").attr("src", "star1.png");
+                $("#img-4").attr("src", "star1.png");
+                $("#img-5").attr("src", "star1.png");
+                $("#rate").text("Rate : 2");
+            }if(event.target.id=="img-3"){
+                $("#img-1").attr("src", "star.png");
+                $("#img-2").attr("src", "star.png");
+                $("#img-3").attr("src", "star.png");
+                $("#img-4").attr("src", "star1.png");
+                $("#img-5").attr("src", "star1.png");
+                $("#rate").text("Rate: 3");
+            }if(event.target.id=="img-4"){
+                $("#img-1").attr("src", "star.png");
+                $("#img-2").attr("src", "star.png");
+                $("#img-3").attr("src", "star.png");
+                $("#img-4").attr("src", "star.png");
+                $("#img-5").attr("src", "star1.png");
+                $("#rate").text("Rate : 4");
+            }if(event.target.id=="img-5"){
+                $("#img-1").attr("src", "star.png");
+                $("#img-2").attr("src", "star.png");
+                $("#img-3").attr("src", "star.png");
+                $("#img-4").attr("src", "star.png");
+                $("#img-5").attr("src", "star.png");
+
+                $("#rate").text("Rate : 5");
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        p{
+            display: inline-block;
+        }
+        #image-3{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="name_btn">Click Me</button>
+        <p id="name-1">Mohammed</p>
+    </div>
+
+    <div>
+        <p id="name-2">Mohammed</p>
+    </div>
+    <div>
+        <img id="image-1" src="1.jpeg" width="200" height="150"/>
+    </div>
+
+    <div>
+        <button id="image_btn">Fate</button>
+        <img id="image-2" src="2.jpeg" width="200" height="200"/>
+    </div>
+
+    <div>
+        <button id="image_animate">Start</button>
+        <img id="image-3" src="tiger.gif" width="200" height="200"/>
+    </div>
+    <script>
+        $("#name_btn").click(function(){
+            $("#name-1").css("background-color", "blue");
+        });
+        $('#name-2').mouseover(function(){
+            $("#name-2").css("background-color", "yellow");
+            $("#name-2").css("font-size", "40px");
+        });
+        $("#image-1").mouseover(function(){
+            $("#image-1").attr("src", "2.jpeg");
+        });
+        $("#image_btn").click(function(){
+            $("#image-2").fadeToggle(2000);
+        });
+
+        $("#image_animate").click(function(){
+            $("#image-3").animate({left:'2000', backgroundColor:'#76ea09'},"slow");
+        });
+
+    </script>
+</body>
+</html>
