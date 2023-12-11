@@ -1,0 +1,115 @@
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ 
+.main-body {
+  width: 80%;
+  margin: auto;
+  background-color: #e7e7e7;
+  padding: 20px;
+  border: 3px #260498 solid;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: #22fa89 10px 10px 50px inset , #ced344 -10px -10px 50px inset, #ef044a 15px 15px 20px , #7b09f3 -5px -5px 20px ;
+  margin-top: 50px;
+  transition: all 4s;
+  
+}
+
+ .main-content {
+   width: 30%;
+   height: 600px;
+   background-color: #072c20;
+   float: left;
+   margin: 5px;
+   border: 7px #58588a solid;
+   border-radius: 20px;
+    column-count:3; 
+    resize:both;
+    column-rule:2px solid #cc1a1a;
+    overflow:auto; 
+}
+.images-layout{
+  width: 60%;
+  height: 600px;
+
+  float: right;
+  box-shadow: #44ff2f 10px 10px 50px inset , #286e98 -10px -10px 50px inset;
+ margin: 5px;
+ border: 7px #6c9628 solid;
+ border-radius: 20px;
+ resize:both;
+ overflow-y: scroll;
+ 
+}
+.div-container{
+  clear: both;
+}
+.images-layout img{
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  border: 2px #ef044a solid;
+  box-shadow: #7b09f3 5px 5px 10px;
+  transition: all 2s;
+}
+
+
+
+.images-layout img:hover  {
+
+   transform: scale(1.5);
+   box-shadow: yellow 5px 5px 10px;
+}
+.images-layout img:active  {
+  box-shadow: #1a1a1a 5px 5px 5px;
+  transform: scale(3);
+}
+mark:hover{
+  background-color: #44ff2f;
+}
+mark{
+  transition: all 2s;
+}
+
+.main-content:hover{
+  text-decoration: underline;
+}
+
+.main-content:active mark {
+  background: linear-gradient(to bottom, #ffcc00, #ff3300); ;
+}
+
+@media all and (orientation:landscape){ 
+  .main-body:hover{
+      transform:skew(20deg);
+      box-shadow: #a40577 10px 10px 50px inset , #600fda -10px -10px 50px inset, #00c0ff 15px 15px 20px , #c6dce3 -5px -5px 20px ;
+  }
+
+  .main-body:active{
+      transform: scale(0.5);
+      box-shadow: #bd0067 10px 10px 50px inset , #ff5555 -10px -10px 50px inset, #9629f1 15px 15px 20px , #28515e -5px -5px 20px ;
+  }
+}
+
+
+
+@media screen and (max-width:600px){
+  img{
+    transform:rotate(45deg)
+}
+
+ 
+img:hover{
+    transform:rotate(0deg);
+    border:2px dashed #6c9628;
+    transform: scale(1.5);
+    box-shadow: #260498 5px 5px 5px;
+}
+
+img:active{
+    border: 1px double #ef044a;
+}
+}

@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+#main-view{
+    width: 80vw;
+    height: 70vh;
+    background-color: green;
+    display: grid;
+    align-items: center;
+}
+#draggable-view, #dropped-view{
+    width: 90%;
+    height: 40%;
+    flex-direction: row;
+    flex-basis: auto;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+    float:left;
+
+}
+img{
+    width: 100px;
+    height: 100px;
+    flex: 1;
+    background-size: auto;
+    border: 3px solid darkmagenta;
+    transition: all 2s;
+}
+img:hover{
+    transform: rotate(360deg) scale(2);
+}

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        .mainwrapper{
+            width:100vw;
+            height:90vh;
+            border:1px solid black;
+            display:flex;
+            flex-direction:column;
+            flex-wrap:wrap;
+            /*display will orient al childrens horizontal inside pafrent element
+                default direction for flex box : row 
+
+            */
+            /*justify-content:space-evenly;
+            align-items:flex-end;*/
+            /*align-items:center;
+            justify-content:center;*/
+        }
+            .mainwrapper > section {
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+            }
+        .box1{
+            background-color:red;
+            /*order:4;*/
+        }
+        .box2 {
+            background-color: yellow;
+            /*align-self:center;*/
+            /*flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 250px;
+                */
+            /*flex:1 0 250px;*/
+            /*
+            min-width:250px;*/
+            /*min-height:250px;*/
+            /*order:1;*/
+        }
+        .box3 {
+            background-color: green;
+            /*order:2;*/
+        }
+        .box4 {
+            background-color: blue;
+            /*order:3;*/
+        }
+    </style>
+</head>
+<body>
+    <section class="mainwrapper">
+        <section class="box1">One</section>
+        <section class="box2">Two</section>
+        <section class="box3">Three</section>
+        <section class="box4">Four</section>
+    </section>
+</body>
+</html>

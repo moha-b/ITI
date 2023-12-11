@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        #mainmenu {
+            width: 60%;
+            margin: 10px auto;
+            text-align: center;
+        }
+        #mainmenu>li{
+            display:inline-block;
+            width:70px;
+            text-align:center;
+            padding:10px;
+            margin:10px 20px;
+            background-color:blue;
+            color:white;
+            font-weight:bold;
+        }
+        #mainmenu>li:hover{
+            background-color:darkgreen;
+            cursor:pointer;
+        }
+        #contactli{
+            position:relative;
+        }
+        #contactmenu {
+            display: none;
+            position: absolute;
+            width:100%;
+            top:103%;
+            left:0;
+        }
+       
+        #contactmenu>li{
+            background-color:dimgray;
+             margin-top:2px;     
+        }
+        #contactli:hover #contactmenu{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <ul id="mainmenu">
+        <li>Home</li>
+        <li id="contactli">Contact
+            <ul id="contactmenu">
+                <li>Mobile</li>
+                <li>Email</li>
+                <li>Chat</li>
+            </ul>
+        </li>
+        <li>About</li>
+    </ul>
+</body>
+</html>
