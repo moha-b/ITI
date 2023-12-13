@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="db26e05b-6482-451c-95e8-7173ff21f76a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/task-1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/sky.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UP/tick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/drag/drag.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/drag/drag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/drag/drag.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/form/form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/form/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/form/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/map/map.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/map/map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/map/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/video/video.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/video/video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis/video/video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexbox/flex.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexbox/flex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexbox/flex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grid/grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grid/grid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/icon-128x128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/icon-144x144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/icon-152x152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/icon-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/icon-384x384.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/icon-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/icon-72x72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/icon-96x96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/laptop_top.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/map-marker-alt-solid.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/p3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/p4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/p5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/p6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/pexels-christina-morillo-1181210.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/team-3-800x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/team-4-800x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/team-6-800x800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-v4compatibility.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfonts/fa-v4compatibility.woff2" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2ZUFrPHYjd3CVTuia1XBHZja75L" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "html5",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db26e05b-6482-451c-95e8-7173ff21f76a" name="Changes" comment="" />
+      <created>1702468948457</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702468948457</updated>
+      <workItem from="1702468949515" duration="3027000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/task_1$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1702472042107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

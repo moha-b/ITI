@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task-7</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .static-rect {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: black;
+        }
+        .moving-rect {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+<script>
+    window.addEventListener("load", function () {
+        let isMouseDown = false;
+
+        document.body.addEventListener('mousedown', function (event) {
+            isMouseDown = true;
+            let rect = document.createElement("div");
+            rect.className = "static-rect";
+            drawRectangle(event, rect);
+        });
+
+        document.body.addEventListener('mouseup', function () {
+            isMouseDown = false;
+        });
+
+        document.body.addEventListener('mousemove', function (event) {
+            if (isMouseDown) {
+                let rect = document.createElement("div");
+                rect.className = "moving-rect";
+                drawRectangle(event, rect);
+            }
+        });
+
+        function drawRectangle(e,rect) {
+            rect.style.left = (e.clientX - 50) + "px";
+            rect.style.top = (e.clientY - 50) + "px";
+            document.body.appendChild(rect);
+        }
+    });
+</script>
+</html>
