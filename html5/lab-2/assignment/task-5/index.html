@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #mymap {
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyB90FxtYG_ybAYXGkz0ybkmkboE2nEbezI"></script>
+    <script>
+        window.addEventListener('load', function () {
+            mymap = this.document.querySelector('#mymap');
+        });
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(getposition, errorhandlere);
+
+            } else {
+                //not exist
+                mymap.innerText = "sorry , your browser not Supor Geolocation , please update and try again !!!!";
+            }
+        }
+        function getDetails() {
+            //1- check availability of gelocation in client navigator
+            if (navigator.geolocation) {
+                //exist :  get permission : getcurrentposition
+                navigator.geolocation.getCurrentPosition(getposition, errorhandlere);
+
+            } else {
+                //not exist
+                mymap.innerText = "sorry , your browser not Supor Geolocation , please update and try again !!!!";
+            }
+        }
+        function getposition(e) {
+            lat = e.coords.latitude;
+            lon = e.coords.longitude;
+            var location = new google.maps.LatLng(lat, lon);
+            var specs = { zoom: 17, center: location };
+            new google.maps.Map(mymap, specs);
+
+
+        }
+        function errorhandlere() {
+            alert('Error');
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="Display Map" onclick="getLocation();"/>
+<input type="button" value="Get Details" onclick="getDetails();"/>
+<div id="mymap">
+
+</div>
+</body>
+</html>
