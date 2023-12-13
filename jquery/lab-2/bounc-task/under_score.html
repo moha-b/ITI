@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Underscore.js Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+</head>
+<body>
+
+<h2>Underscore.js Demo</h2>
+
+<h3>Example 1: _.each()</h3>
+<ul id="fruitsList"></ul>
+
+<script>
+    let fruitsArray = ['Apple', 'Banana', 'Orange'];
+
+    _.each(fruitsArray, function(fruit) {
+        let listItem = document.createElement('li');
+        listItem.textContent = fruit;
+        document.getElementById('fruitsList').appendChild(listItem);
+    });
+</script>
+
+<h3>Example 2: _.map()</h3>
+<ul id="squaredNumbersList"></ul>
+
+<script>
+    let numbersArray = [1, 2, 3, 4, 5];
+
+    let squaredNumbersArray = _.map(numbersArray, function(number) {
+        return number * number;
+    });
+
+    _.each(squaredNumbersArray, function(squaredNumber) {
+        let listItem = document.createElement('li');
+        listItem.textContent = squaredNumber;
+        document.getElementById('squaredNumbersList').appendChild(listItem);
+    });
+</script>
+
+</body>
+</html>

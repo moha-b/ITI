@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<!-- <script src="js/jquery.js"></script> -->
+</head>
+
+<body>
+<button id="stop">stop sliding</button>
+<div id="flip"> click here</div>
+<div id="panel" style="display: none;width: 100px; height: 100px;background-color: red;">Hello jquery</div>
+<P >loremmm  sdfawefwea</P>
+<div id="myParg" style="height: 50px;">see More</div>
+<div id="myParg2"  style=" height: 100px;background-color: yellow;">complete my Paragraph</div>
+
+<img src="jQuery.gif" id="img1">
+<button id="btn">hide</button>
+<button id="btn1">show</button>
+<button id="btn3">animate</button>
+<div id="divanimate" style="width: 100px;height: 100px;background-color: red;position:absolute;">My Div</div>
+
+<ul>
+	<li>item 1</li>
+	<li class="start">item 2</li>
+	<li>item 3</li>
+	<li>item 3</li>
+</ul>
+	<p>My Par</p>
+	<p>My Par555
+	<h1>Hello</h1>
+	<span>Jquery</span>
+</p>
+
+	<!-- <div id="div1">Hello jquery Session</div> -->
+	<script>
+		$("#stop").click(function(){
+			$("#panel").stop();
+		})
+
+		$("#flip").click(function(){
+			$("#panel").slideDown(5000).slideUp(3000);
+		})
+
+		$("#btn3").click(function(){
+			$("#img1").animate({width:'300px'});
+			$("#divanimate").animate({left:'300px', backgroundColor:'#4E1402'},"slow");
+		})
+		$("#btn").click(function(){
+			$("#img1").hide(3000,function(){
+				// alert("this image hidded");
+				$("#img1").show(2000);
+			});
+        
+		})
+		$("#btn1").click(function(){
+			$("#img1").fadeToggle(400);
+			$("#div1").fadeTo("slow", 0.15);
+			// $("#img1").show();
+		})
+		// $("li.sec-item").nextAll().css("background-color","red")
+		$("li.start").siblings().css("background-color","red")
+		$("p").eq(0).css("background-color", "yellow");
+		// $("div p").last().hide();
+		// $("p:empty").hide();
+		$(document).ready(function () {
+			// alert("Hello my Page Created");
+		});
+		$("#myParg").click(function(){
+			$("#myParg2").slideToggle("slow");
+		})
+		// document.getElementById("div1").style.visibility= "hidden";
+		// document.getElementById("div1").style.display= "none";
+		// $("#div1").hide();
+		// $("p").hide();
+	</script>
+</body>
+
+</html>

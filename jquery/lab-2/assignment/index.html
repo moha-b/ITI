@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task-1</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        #result {
+            border: black 2px solid;
+            width: 200px;
+            height: 200px;
+            margin-top: 30px;
+            padding: 10px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#searchBtn").on("click", function () {
+                let id = $("#productId").val();
+                console.log(id);
+                let url = "https://reqres.in/api/products/" + id;
+                $.getJSON(url, function (result) {
+                    let htmlContent = `
+                        <img src="imge.webp" alt="${result.data.name}" />
+                        <h2>${result.data.name}</h2>
+                        <p>Year: ${result.data.year}</p>
+                    `;
+                    $("#result").html(htmlContent);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<input id="productId" placeholder="Enter a Number">
+<button id="searchBtn">Search</button>
+<div id="result"></div>
+</body>
+</html>

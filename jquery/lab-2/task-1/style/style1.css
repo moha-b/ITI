@@ -1,0 +1,18 @@
+div{
+    padding: 20px;
+}
+#div_a{
+    background-color: yellow;
+}
+.div_b{
+    width: 100px;
+    background-color: blue;
+}
+.highlight{
+    width: 200px;
+    background-color: red;
+}
+
+p{
+    padding: 10px;
+}

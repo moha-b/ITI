@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            let username=new URL(window.location.href).searchParams.get("username");
+            $("#welcome").text("Welcome   " + username);
+        });// Loaded
+    </script>
+    <style>
+        p{
+            width: 100vw;
+            height: 100px;
+            color: black;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <p id="welcome"></p>
+</body>
+</html>
