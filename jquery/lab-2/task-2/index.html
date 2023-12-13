@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Display</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        #result {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<h1>User Data Display</h1>
+
+<label for="userId">Enter User ID:</label>
+<input type="text" id="userId" placeholder="Enter user ID">
+<button onclick="displayUser()">Display</button>
+
+<h2>User Details:</h2>
+<div id="result"></div>
+
+<h2>All Users:</h2>
+<div id="allUsers"></div>
+
+<script>
+    function displayUser() {
+        const userId = $('#userId').val();
+
+        $.ajax({
+            url: `https://reqres.in/api/users/${userId}`,
+            method: 'GET',
+            success: function(data) {
+                if (data.data) {
+                    const user = data.data;
+                    const resultHtml = `
+              <p><strong>First Name:</strong> ${user.first_name}</p>
+              <p><strong>Last Name:</strong> ${user.last_name}</p>
+              <img src="${user.avatar}" alt="User Avatar">
+            `;
+                    $('#result').html(resultHtml);
+                } else {
+                    $('#result').html('<p>User not found</p>');
+                }
+            },
+            error: function() {
+                $('#result').html('<p>Error retrieving user data</p>');
+            }
+        });
+    }
+
+    $.ajax({
+        url: 'https://reqres.in/api/users',
+        method: 'GET',
+        success: function(data) {
+            if (data.data) {
+                const allUsers = data.data;
+                let allUsersHtml = '';
+                allUsers.forEach(user => {
+                    allUsersHtml += `
+              <div>
+                <p><strong>First Name:</strong> ${user.first_name}</p>
+                <p><strong>Last Name:</strong> ${user.last_name}</p>
+                <img src="${user.avatar}" alt="User Avatar">
+              </div>
+            `;
+                });
+                $('#allUsers').html(allUsersHtml);
+            } else {
+                $('#allUsers').html('<p>No users found</p>');
+            }
+        },
+        error: function() {
+            $('#allUsers').html('<p>Error retrieving user data</p>');
+        }
+    });
+</script>
+
+</body>
+</html>

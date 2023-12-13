@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1</title>
+  <link rel="stylesheet" href="style/style1.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+    }
+
+    #maincontainer {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    #div_a {
+      height: 50px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .div_b {
+      height: 50px;
+      width: 50px;
+      background-color: lightblue;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+
+    #face, #face_fade, #tiger {
+      margin-bottom: 10px;
+    }
+
+    form {
+      margin-bottom: 10px;
+    }
+
+    #login_msg {
+      color: red;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("input[name=change_css]").on("click", function () {
+        $("#div_a").css("border-width", "3px");
+        $("#div_a").css("border-style", "solid");
+        $("#div_a").css("border-color", "red");
+      });
+
+      $(".div_b").on("mouseover", function () {
+        $(this).toggleClass("highlight");
+      });
+
+      $("img").on("error", function () {
+        $(this).attr(
+                "src",
+                "https://yt3.ggpht.com/ytc/AMLnZu8XtlipNIpeKZgTSg1z64NO-mF7FEmlC2qML8WvwA=s900-c-k-c0x00ffffff-no-rj"
+        );
+      });
+
+      $("#face").on("mouseover", function () {
+        $(this).attr("src", "Images/sad.jpeg");
+      });
+
+      $("#face").on("mouseout", function () {
+        $(this).attr("src", "Images/smile.jpeg");
+      });
+
+      $("input[name=login]").on("click", function () {
+        let usernameValue = $("input[name=username]").val();
+        let passwordValue = $("input[name=password]").val();
+
+        if (usernameValue !== "" && passwordValue !== "") {
+          if (usernameValue === "hab" && passwordValue === "123") {
+            $("#login_msg").text("");
+            $("form").submit();
+          } else {
+            $("#login_msg").text("Not valid");
+          }
+        } else {
+          $("#login_msg").text("Enter username and password");
+        }
+      });
+
+      $("input[name=fade_btn]").on("click", function () {
+        $("#face_fade").fadeToggle(2000);
+      });
+
+      $("input[name=animate_btn]").on("click", function () {
+        $("#tiger").animate(
+                {
+                  paddingLeft: "1220px",
+                },
+                10000,
+                "linear",
+                function () {
+                  $("#tiger").fadeOut(500);
+                }
+        );
+      });
+    });
+  </script>
+</head>
+<body>
+<div id="maincontainer">
+  <h1>Assignment A</h1>
+  <div id="div_a"></div>
+  <input type="button" name="change_css" value="Change CSS" />
+
+  <h1>Assignment B</h1>
+  <div class="div_b"></div>
+
+  <h1>Assignment C</h1>
+  <div>
+    <img id="face" src="Images/smile.jpeg" width="200" height="200" />
+  </div>
+
+  <h1>Assignment D</h1>
+  <div>
+    <form method="get" action="home.html">
+      <input type="text" placeholder="Enter your username" name="username" />
+      <input type="password" placeholder="Enter your password" name="password" />
+      <p id="login_msg"></p>
+      <input type="button" name="login" value="LOGIN" />
+    </form>
+  </div>
+
+  <h1>Assignment E</h1>
+  <div>
+    <input type="button" value="Fade" name="fade_btn" />
+    <img id="face_fade" src="Images/smile.jpeg" width="200" height="200" />
+  </div>
+
+  <h1>Assignment F</h1>
+  <div>
+    <input type="button" value="Animate" name="animate_btn" />
+    <img id="tiger" src="Images/tiger.gif" width="100" height="100" />
+  </div>
+</div>
+</body>
+</html>
