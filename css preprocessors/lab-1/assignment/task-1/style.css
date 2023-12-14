@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+#content p, #content, header {
+  border: 1px solid #0000ff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+header {
+  background-color: #ffffff;
+  color: #0000ff;
+  padding: 10px;
+}
+
+#content {
+  padding: 10px;
+  color: #ffffff;
+}
+footer {
+  border: 2px solid #00ff00;
+  padding: 10px;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */

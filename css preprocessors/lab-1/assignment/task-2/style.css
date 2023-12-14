@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.line-one {
+  border: 2px dashed #000000;
+  margin: 10px;
+  border-radius: 2px;
+  background-color: aqua;
+}
+
+.line-two {
+  border: 2px solid #000000;
+  margin: 10px;
+  border-radius: 2px;
+  background-color: #ff0000;
+}
+
+.line-three {
+  border: 2px solid #000000;
+  margin: 10px;
+  border-radius: 2px;
+  background-color: #00ff00;
+}
+
+/*# sourceMappingURL=style.css.map */
