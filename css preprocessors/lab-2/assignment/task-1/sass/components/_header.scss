@@ -1,0 +1,10 @@
+.header-img-box{
+  @extend %headerPlaceholder
+}
+
+.header-img{
+  background-image: url(images/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

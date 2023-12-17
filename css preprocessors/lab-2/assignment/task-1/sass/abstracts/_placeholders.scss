@@ -1,0 +1,30 @@
+%liPlaceholder{
+  list-style: none;
+  padding: $basePadding;
+  background-color: $liBackGroundColor;
+  border-bottom-right-radius:$cornerRadius;
+  border-top-left-radius:$cornerRadius;
+  text-align: center;
+  border: $borderThickness $borderShape $whiteColor;
+  text-transform: capitalize;
+  margin-left: $baseMargin;
+  height: 50px;
+}
+
+%imgPlaceholder{
+  width: 100%;
+  height: 200px;
+  border: $borderShape $borderThickness $borderColor;
+  padding: $basePadding;
+}
+
+%headerPlaceholder{
+  height: 200px;
+
+}
+%footerPlaceholder{
+  text-align: center;
+  background-color: $footerColor;
+  border-bottom-right-radius:$cornerRadius;
+  border-top-left-radius:$cornerRadius;
+}
