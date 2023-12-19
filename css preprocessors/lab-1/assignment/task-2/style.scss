@@ -1,0 +1,26 @@
+$black: #000000;
+$green: #00ff00;
+$red: #ff0000;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@mixin colored-view($color, $style) {
+  border: 2px $style $black;
+  margin: 10px;
+  border-radius: 2px;
+  background-color: $color;
+}
+
+.line-one{
+  @include colored-view(#00FFFFFF,dashed);
+}
+
+.line-two{
+  @include colored-view($red,solid);
+}
+
+.line-three{
+  @include colored-view($green,solid);
+}

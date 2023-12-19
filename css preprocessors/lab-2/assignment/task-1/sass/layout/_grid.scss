@@ -1,0 +1,48 @@
+@mixin gridMixin($screenInfix,$numberOfColumns,$screenBreakPoint){
+  .container-fluid{
+    width: 100%;
+  }
+  .row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @if($screenInfix==""){
+    @media all and (min-width:$screenBreakPoint){
+      @for $i from 1 to 13 {
+        .col-#{$i}{
+          width: 100/($numberOfColumns/$i)*1%;
+        }
+      }
+      .container{
+        width: 100%;
+      }
+    }
+  }
+  @else{
+    @media all and (min-width:$screenBreakPoint){
+      .reverse-#{$screenInfix}{
+        flex-direction: column-reverse !important;
+      }
+      .normal-#{$screenInfix}{
+        flex-direction: row !important;
+      }
+      @for $i from 1 to 13 {
+        .col-#{$screenInfix}-#{$i}{
+          width: 100/($numberOfColumns/$i)*1%;
+        }
+      }
+      .container{
+        width: $screenBreakPoint;
+        margin: auto
+      }
+    }
+  }
+}
+
+@include gridMixin("",12,0px);
+@include gridMixin("sm",12,576px);
+@include gridMixin("md",12,768px);
+@include gridMixin("lg",12,992px);
+@include gridMixin("xl",12,1200px);
+@include gridMixin("xxl",12,1400px);

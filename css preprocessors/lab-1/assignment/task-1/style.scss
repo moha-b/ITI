@@ -1,0 +1,40 @@
+$white: #ffffff;
+$blue: #0000ff;
+$green: #00ff00;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+}
+
+%section {
+  border: 1px solid $blue;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+header {
+  background-color: $white;
+  color: $blue;
+  @extend %section;
+  padding: 10px;
+}
+
+#content {
+  padding: 10px;
+  color: $white;
+  @extend %section;
+  p{
+    @extend  %section;
+  }
+}
+
+footer {
+  border: 2px solid $green;
+  padding: 10px;
+  color: $white;
+}

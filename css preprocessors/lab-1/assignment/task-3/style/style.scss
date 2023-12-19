@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$footerColor:#5e7ca8;
+$liBackGroundColor:#acc7d0;
+$bodyBackGroundColor:#e6eaeb;
+$typographyColor:#212426;
+$whiteColor:white;
+
+
+
+
+@mixin gridMixin($screenInfix,$numberOfColumns,$screenBreakPoint){
+  .container-fluid{
+    width: 100%;
+  }
+  .row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @if($screenInfix==""){
+    @media all and (min-width:$screenBreakPoint){
+      @for $i from 1 to 13 {
+        .col-#{$i}{
+          width: 100/($numberOfColumns/$i)*1%;
+        }
+      }
+      .container{
+        width: 100%;
+      }
+    }
+  }
+  @else{
+    @media all and (min-width:$screenBreakPoint){
+      .reverse-#{$screenInfix}{
+        flex-direction: column-reverse !important;
+      }
+      .normal-#{$screenInfix}{
+        flex-direction: row !important;
+      }
+      @for $i from 1 to 13 {
+        .col-#{$screenInfix}-#{$i}{
+          width: 100/($numberOfColumns/$i)*1%;
+        }
+      }
+      .container{
+        width: $screenBreakPoint;
+        margin: auto
+      }
+    }
+  }
+}
+
+@include gridMixin("",12,0px);
+@include gridMixin("sm",12,576px);
+@include gridMixin("md",12,768px);
+@include gridMixin("lg",12,992px);
+@include gridMixin("xl",12,1200px);
+@include gridMixin("xxl",12,1400px);
+
+body{
+  background-color: $bodyBackGroundColor;
+}
+nav {
+  margin-top: 10px;
+  li{
+    list-style: none;
+    background-color: $liBackGroundColor;
+    padding: 10px;
+    border-bottom-right-radius:20px;
+    border-top-left-radius:20px;
+    text-align: center;
+    border: 2px solid $whiteColor;
+    text-transform: capitalize;
+    margin-left: 10px;
+    height: 50px;
+  }
+}
+header{
+  
+  .header-photo{
+    height: 200px;
+    background-image: url(assets/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+section{
+  margin: 40px 0;
+  .place {
+      h2{
+        font-size: 20px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        margin-left: 10px;
+      }
+      
+      p{
+        margin-bottom: 10px;
+        margin-left: 10px;
+      }
+  }
+  img{
+    width: 100%;
+    height: 200px;
+    border: 2px solid black;
+    padding: 10px;
+  }
+}
+
+footer{
+  text-align: center;
+  background-color: $footerColor;
+  border-bottom-right-radius:20px;
+  border-top-left-radius:20px;
+}
+
+// @media screen and (min-width:768px)and(max-width:992px){
+//   .place{
+//     .row{
+//       flex-direction: column-reverse !important;
+//     }
+//   }
+// }
