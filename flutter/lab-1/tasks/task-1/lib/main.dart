@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -21,23 +23,35 @@ class _MyAppState extends State<MyApp> {
 
   String image1 = "images/1.png";
   String image2 = "images/1.png";
+
+  String rollDice() {
+    final random = Random();
+    final randomIndex = random.nextInt(list.length);
+    final newImage = list[randomIndex];
+
+    return newImage;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("The Dice App",
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+          title: const Text(
+            "The Dice App",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          ),
           backgroundColor: Colors.lightGreen,
           actions: [
             GestureDetector(
               onTap: () {
-                setState(() {});
+                setState(() {
+                  image1 = rollDice();
+                });
               },
-              child: Text(
-                "fdjkalfjkldjfkl;das",
+              child: const Text(
+                "Roll One Dice",
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -64,13 +78,14 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
               ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      image1 = list[3];
-                      image2 = list[2];
-                    });
-                  },
-                  child: const Text("Roll Dice"))
+                onPressed: () {
+                  setState(() {
+                    image1 = rollDice();
+                    image2 = rollDice();
+                  });
+                },
+                child: const Text("Roll Dice"),
+              ),
             ],
           ),
         ),
