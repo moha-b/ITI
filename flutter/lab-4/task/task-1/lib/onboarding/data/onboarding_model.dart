@@ -18,15 +18,16 @@ class Quote {
 }
 
 Future<void> saveThisQuote(String quote) async {
-  final box = await Hive.openBox('quotes');
+  final box = await Hive.openBox<String>('quotes');
 
   await box.add(quote);
+  await box.close();
 }
 
-Future<List<dynamic>> getListFromHive() async {
-  final box = await Hive.openBox('quotes');
+Future<List<String>> getListFromHive() async {
+  final box = await Hive.openBox<String>('quotes');
 
-  final List list = box.values.toList();
+  final List<String> list = box.values.toList();
 
   await box.close();
 

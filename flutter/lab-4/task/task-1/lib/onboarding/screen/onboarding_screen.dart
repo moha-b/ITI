@@ -64,28 +64,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         _currentPageIndex = index;
                         image = listImage[randomIndex];
                       });
+                      print(favList);
                     },
                   ),
                 ),
-                if (favList.isNotEmpty)
-                  SizedBox(
-                    height: 100,
-                    child: ListView.separated(
-                        scrollDirection: Axis.horizontal,
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        itemBuilder: (context, index) => Container(
-                              width: 100,
-                              padding: const EdgeInsets.all(8),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              child: Text(favList[index]),
-                            ),
-                        separatorBuilder: (context, index) =>
-                            const SizedBox(width: 5),
-                        itemCount: favList.length),
-                  ),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Row(

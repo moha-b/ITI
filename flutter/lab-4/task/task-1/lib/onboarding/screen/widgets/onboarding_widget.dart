@@ -19,15 +19,19 @@ class OnboardingWidget extends StatelessWidget {
           Row(
             children: [
               const Spacer(),
-              LikeButton(
-                likeBuilder: (bool isLiked) {
-                  ///
-                  saveThisQuote(content);
-                  return Icon(
-                    Icons.favorite,
-                    color: isLiked ? Colors.pinkAccent : Colors.white,
-                  );
-                },
+              GestureDetector(
+                child: LikeButton(
+                  onTap: (s) async {
+                    await saveThisQuote(content);
+                    print("object");
+                  },
+                  likeBuilder: (bool isLiked) {
+                    return Icon(
+                      Icons.favorite,
+                      color: isLiked ? Colors.pinkAccent : Colors.white,
+                    );
+                  },
+                ),
               ),
             ],
           ),
