@@ -1,0 +1,22 @@
+{
+  "0": {
+    "title": "dummy",
+    "body": "contains dummy text",
+    "completed": false
+  },
+  "1": {
+    "title": "hab here",
+    "body": "long live hitler",
+    "completed": true
+  },
+  "2": {
+    "title": "Buy groceries",
+    "body": "Milk, eggs, bread",
+    "completed": false
+  },
+  "3": {
+    "title": "Buy groceries",
+    "body": "Milk, eggs, bread",
+    "completed": false
+  }
+}
