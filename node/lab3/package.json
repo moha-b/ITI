@@ -1,0 +1,23 @@
+{
+  "name": "mohab-package",
+  "version": "1.0.0",
+  "description": "this is `hab` project **DON'T COPY FROM MEEEEEEE**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ITI"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "hab",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.2.0"
+  }
+}
